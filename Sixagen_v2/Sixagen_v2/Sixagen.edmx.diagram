@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="66a040a1e17847d99dac636ba1432ff4" Name="Diagram1">
+        <EntityTypeShape EntityType="Sixagenv2Model.Agendas" Width="1.5" PointX="5.25" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sixagenv2Model.Clientes" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sixagenv2Model.Empleados" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sixagenv2Model.Equipos_Reparacion" Width="1.5" PointX="8.25" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sixagenv2Model.Login" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sixagenv2Model.Productos" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sixagenv2Model.Roles" Width="1.5" PointX="3" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sixagenv2Model.Ventas" Width="1.5" PointX="5.25" PointY="3.25" IsExpanded="true" />
+        <AssociationConnector Association="Sixagenv2Model.FK__Agendas__Cliente__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="Sixagenv2Model.FK__Agendas__Emplead__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="Sixagenv2Model.FK__Clientes__IDUsua__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="Sixagenv2Model.FK__Equipos_R__Dueno__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="Sixagenv2Model.FK__Ventas__Cliente__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="Sixagenv2Model.FK__Empleados__IDUsu__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="Sixagenv2Model.FK__Equipos_R__Emple__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="Sixagenv2Model.FK__Ventas__Empleado__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="Sixagenv2Model.FK__Roles__IDUsuario__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="Sixagenv2Model.FK__Ventas__Producto__49C3F6B7" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

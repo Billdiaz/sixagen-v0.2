@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <link href="~/Content/DL.css" rel="stylesheet" type="text/css" />
+    
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-top: -50px;">
+        @if (User.IsInRole("Admin"))
+        {
+            <li class="nav-item active">
+                @Html.ActionLink("Sixagen", "Index", "Empleados", new { area = "" }, new { @class = "navbar-brand" })
+            </li>
+           
+
+        }
+
+        else if (User.IsInRole("Cliente"))
+        {
+            <li class="nav-item active">
+                @Html.ActionLink("Sixagen", "Index", "HomeClientes", new { area = "" }, new { @class = "navbar-brand" })
+            </li>
+           
+        }
+
+
+        else if (User.IsInRole("Empleado"))
+        {
+            <li class="nav-item active">
+                @Html.ActionLink("Sixagen", "Index", "Equipos_Reparacion", new { area = "" }, new { @class = "navbar-brand" })
+            </li>
+
+        }
+        else
+        {
+            <li class="nav-item active">
+                @Html.ActionLink("Sixagen", "Index", "Productos", new { area = "" }, new { @class = "navbar-brand" })
+            </li>
+        }
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+
+                @if (User.IsInRole("Empleado"))
+                {
+                    <li class="nav-item active">
+                        @Html.ActionLink("Equipos", "Index", "Equipos_Reparacion", null, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item active">
+                        @Html.ActionLink("Agendas", "Index", "AgendasEmpleados", null, new { @class = "nav-link" })
+                    </li>
+
+                    <li class="nav-item active">
+                        @Html.ActionLink("Productos", "Index", "Productos", null, new { @class = "nav-link" })
+                    </li>
+                }
+
+                @if (User.IsInRole("Cliente")) { 
+
+                    <li class="nav-item active">
+                        @Html.ActionLink("Mis Equipos", "IndexC", "Equipos_Reparacion", null, new { @class = "nav-link" })
+                    </li>
+
+                    <li class="nav-item active">
+                        @Html.ActionLink("Agendas", "Index", "HomeClientes", null, new { @class = "nav-link" })
+                    </li>
+
+                    <li class="nav-item active">
+                        @Html.ActionLink("Productos", "Index", "Productos", null, new { @class = "nav-link" })
+
+                    </li>}
+                
+
+                else if (User.IsInRole("Admin"))
+                {
+                    <li class="nav-item active">
+                        @Html.ActionLink("Empleados", "Index", "Empleados", null, new { @class = "nav-link" })
+                    </li>
+
+                    <li class="nav-item active">
+                        @Html.ActionLink("Equipos Reparación", "IndexA", "Equipos_Reparacion", null, new { @class = "nav-link" })
+                    </li>
+
+                    <li class="nav-item active">
+                        @Html.ActionLink("Agendas", "Index", "AgendasAdmin", null, new { @class = "nav-link" })
+                    </li>
+                }
+
+            </ul>
+
+            <ul class="navbar-nav">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li class="nav-item active">
+                        <a class="nav-link">Hola - @User.Identity.Name</a>
+                    </li>
+                    <li class="nav-item active">
+                        @Html.ActionLink("Cerrar Sesion", "Cerrar", "Cuentas", null, new { @class = "nav-link" })
+                    </li>
+                }
+                else
+                {
+                <li class="nav-item active">
+                        @Html.ActionLink("Productos", "Index", "Productos", null, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item active">
+                        @Html.ActionLink("Iniciar Session", "Login", "Cuentas", htmlAttributes: new { @class = "nav-link" })
+                    </li>
+                }
+
+            </ul>
+
+
+               
+            
+                <ul class="navbar-nav">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item active">
+                            <a class="nav-link">Hola - @User.Identity.Name</a>
+                        </li>
+                        <li class="nav-item active">
+                            @Html.ActionLink("Cerrar Sesion", "Cerrar", "Cuentas", null, new { @class = "nav-link" })
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item active">
+                            @Html.ActionLink("Iniciar Session", "Login", "Cuentas",null, new { @class = "nav-link" })
+                        </li>
+                    }
+                </ul>
+
+        </div>
+    </nav>
+    
+
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Sixagen_v2.Productos>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="titulo">Productos</h2>
+<hr />
+
+
+<div class="row">
+
+
+@foreach (var item in Model)
+{
+
+    <div class="producto" id="producto">
+        <div class="col-12 imagen">
+            <img src="@Html.DisplayFor(modelItem => item.Imagen)" alt="@Html.DisplayFor(modelItem => item.Producto)" />
+        </div>
+        <div class="info ">
+            <div>
+                <h3>@Html.DisplayFor(modelItem => item.Producto)</h3>
+                <h5 class="precio">@Html.DisplayFor(modelItem => item.Precio)</h5>
+            </div>
+            <div>
+                <p>@Html.DisplayFor(modelItem => item.Descripcion)</p>
+
+            </div>
+
+            <div>
+                @Html.ActionLink("Mas detalles", "Details", new { id = item.ID })
+            </div>
+        </div>
+    </div>
+
+}
+
+</div>
+
+
+
+

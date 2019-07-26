@@ -1,0 +1,91 @@
+﻿@model Sixagen_v2.Equipos_Reparacion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Equipos Reparacion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Equipo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre_Equipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Problema)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Problema)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+        <dt>
+           Fecha
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Entrada)
+        </dd>
+
+        <dt>
+            Cliente
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Clientes.Nombre)
+        </dd>
+
+        @if (User.IsInRole("Admin"))
+        {
+            <dt>
+                Empleado Encargado
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Empleados.Nombre)
+            </dd>
+        }
+
+        
+
+    </dl>
+</div>
+<p>
+    @if (User.IsInRole("Admin"))
+    {
+        @Html.ActionLink("Editar", "EditA", new { id = Model.ID }) <span>|</span>
+        
+        @Html.ActionLink("Volver", "IndexA")
+    }
+
+    @if (User.IsInRole("Empleado"))
+    {
+        @Html.ActionLink("Editar Estado", "Edit", new { id = Model.ID }) <span>|</span>
+        @Html.ActionLink("Volver", "Index")
+    }
+
+
+</p>
