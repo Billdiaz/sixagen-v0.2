@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Sixagenv2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Sixagenv2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Agendas">
           <Key>
             <PropertyRef Name="ID" />
@@ -94,7 +94,7 @@
           <Property Name="Cliente" Type="int" />
           <Property Name="Empleado" Type="int" />
         </EntityType>
-        <Association Name="FK__Agendas__Cliente__3F466844">
+        <Association Name="FK__Agendas__Cliente__2B3F6F97">
           <End Role="Clientes" Type="Self.Clientes" Multiplicity="0..1" />
           <End Role="Agendas" Type="Self.Agendas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -106,7 +106,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Agendas__Emplead__403A8C7D">
+        <Association Name="FK__Agendas__Emplead__2C3393D0">
           <End Role="Empleados" Type="Self.Empleados" Multiplicity="0..1" />
           <End Role="Agendas" Type="Self.Agendas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -118,7 +118,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Clientes__IDUsua__3C69FB99">
+        <Association Name="FK__Clientes__IDUsua__286302EC">
           <End Role="Login" Type="Self.Login" Multiplicity="0..1" />
           <End Role="Clientes" Type="Self.Clientes" Multiplicity="*" />
           <ReferentialConstraint>
@@ -130,7 +130,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Empleados__IDUsu__398D8EEE">
+        <Association Name="FK__Empleados__IDUsu__25869641">
           <End Role="Login" Type="Self.Login" Multiplicity="0..1" />
           <End Role="Empleados" Type="Self.Empleados" Multiplicity="*" />
           <ReferentialConstraint>
@@ -142,7 +142,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Equipos_R__Dueno__4316F928">
+        <Association Name="FK__Equipos_R__Dueno__52593CB8">
           <End Role="Clientes" Type="Self.Clientes" Multiplicity="0..1" />
           <End Role="Equipos_Reparacion" Type="Self.Equipos_Reparacion" Multiplicity="*" />
           <ReferentialConstraint>
@@ -154,7 +154,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Equipos_R__Emple__440B1D61">
+        <Association Name="FK__Equipos_R__Emple__534D60F1">
           <End Role="Empleados" Type="Self.Empleados" Multiplicity="0..1" />
           <End Role="Equipos_Reparacion" Type="Self.Equipos_Reparacion" Multiplicity="*" />
           <ReferentialConstraint>
@@ -166,7 +166,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Roles__IDUsuario__4E88ABD4">
+        <Association Name="FK__Roles__IDUsuario__4316F928">
           <End Role="Login" Type="Self.Login" Multiplicity="0..1" />
           <End Role="Roles" Type="Self.Roles" Multiplicity="*" />
           <ReferentialConstraint>
@@ -178,7 +178,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Ventas__Cliente__4AB81AF0">
+        <Association Name="FK__Ventas__Cliente__66603565">
           <End Role="Clientes" Type="Self.Clientes" Multiplicity="0..1" />
           <End Role="Ventas" Type="Self.Ventas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -190,7 +190,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Ventas__Empleado__4BAC3F29">
+        <Association Name="FK__Ventas__Empleado__6754599E">
           <End Role="Empleados" Type="Self.Empleados" Multiplicity="0..1" />
           <End Role="Ventas" Type="Self.Ventas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -202,7 +202,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Ventas__Producto__49C3F6B7">
+        <Association Name="FK__Ventas__Producto__656C112C">
           <End Role="Productos" Type="Self.Productos" Multiplicity="1" />
           <End Role="Ventas" Type="Self.Ventas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -223,49 +223,48 @@
           <EntitySet Name="Productos" EntityType="Self.Productos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Ventas" EntityType="Self.Ventas" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Agendas__Cliente__3F466844" Association="Self.FK__Agendas__Cliente__3F466844">
+          <AssociationSet Name="FK__Agendas__Cliente__2B3F6F97" Association="Self.FK__Agendas__Cliente__2B3F6F97">
             <End Role="Clientes" EntitySet="Clientes" />
             <End Role="Agendas" EntitySet="Agendas" />
           </AssociationSet>
-          <AssociationSet Name="FK__Agendas__Emplead__403A8C7D" Association="Self.FK__Agendas__Emplead__403A8C7D">
+          <AssociationSet Name="FK__Agendas__Emplead__2C3393D0" Association="Self.FK__Agendas__Emplead__2C3393D0">
             <End Role="Empleados" EntitySet="Empleados" />
             <End Role="Agendas" EntitySet="Agendas" />
           </AssociationSet>
-          <AssociationSet Name="FK__Clientes__IDUsua__3C69FB99" Association="Self.FK__Clientes__IDUsua__3C69FB99">
+          <AssociationSet Name="FK__Clientes__IDUsua__286302EC" Association="Self.FK__Clientes__IDUsua__286302EC">
             <End Role="Login" EntitySet="Login" />
             <End Role="Clientes" EntitySet="Clientes" />
           </AssociationSet>
-          <AssociationSet Name="FK__Empleados__IDUsu__398D8EEE" Association="Self.FK__Empleados__IDUsu__398D8EEE">
+          <AssociationSet Name="FK__Empleados__IDUsu__25869641" Association="Self.FK__Empleados__IDUsu__25869641">
             <End Role="Login" EntitySet="Login" />
             <End Role="Empleados" EntitySet="Empleados" />
           </AssociationSet>
-          <AssociationSet Name="FK__Equipos_R__Dueno__4316F928" Association="Self.FK__Equipos_R__Dueno__4316F928">
+          <AssociationSet Name="FK__Equipos_R__Dueno__52593CB8" Association="Self.FK__Equipos_R__Dueno__52593CB8">
             <End Role="Clientes" EntitySet="Clientes" />
             <End Role="Equipos_Reparacion" EntitySet="Equipos_Reparacion" />
           </AssociationSet>
-          <AssociationSet Name="FK__Equipos_R__Emple__440B1D61" Association="Self.FK__Equipos_R__Emple__440B1D61">
+          <AssociationSet Name="FK__Equipos_R__Emple__534D60F1" Association="Self.FK__Equipos_R__Emple__534D60F1">
             <End Role="Empleados" EntitySet="Empleados" />
             <End Role="Equipos_Reparacion" EntitySet="Equipos_Reparacion" />
           </AssociationSet>
-          <AssociationSet Name="FK__Roles__IDUsuario__4E88ABD4" Association="Self.FK__Roles__IDUsuario__4E88ABD4">
+          <AssociationSet Name="FK__Roles__IDUsuario__4316F928" Association="Self.FK__Roles__IDUsuario__4316F928">
             <End Role="Login" EntitySet="Login" />
             <End Role="Roles" EntitySet="Roles" />
           </AssociationSet>
-          <AssociationSet Name="FK__Ventas__Cliente__4AB81AF0" Association="Self.FK__Ventas__Cliente__4AB81AF0">
+          <AssociationSet Name="FK__Ventas__Cliente__66603565" Association="Self.FK__Ventas__Cliente__66603565">
             <End Role="Clientes" EntitySet="Clientes" />
             <End Role="Ventas" EntitySet="Ventas" />
           </AssociationSet>
-          <AssociationSet Name="FK__Ventas__Empleado__4BAC3F29" Association="Self.FK__Ventas__Empleado__4BAC3F29">
+          <AssociationSet Name="FK__Ventas__Empleado__6754599E" Association="Self.FK__Ventas__Empleado__6754599E">
             <End Role="Empleados" EntitySet="Empleados" />
             <End Role="Ventas" EntitySet="Ventas" />
           </AssociationSet>
-          <AssociationSet Name="FK__Ventas__Producto__49C3F6B7" Association="Self.FK__Ventas__Producto__49C3F6B7">
+          <AssociationSet Name="FK__Ventas__Producto__656C112C" Association="Self.FK__Ventas__Producto__656C112C">
             <End Role="Productos" EntitySet="Productos" />
             <End Role="Ventas" EntitySet="Ventas" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Sixagenv2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">

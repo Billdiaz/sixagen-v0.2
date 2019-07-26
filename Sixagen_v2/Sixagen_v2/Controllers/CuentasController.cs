@@ -20,6 +20,7 @@ namespace Sixagen_v2.Controllers
             return View();
         }
 
+        [AllowAnonymous]
         [HttpPost]
         public ActionResult Login(Cuentas c)
         {
@@ -100,6 +101,7 @@ namespace Sixagen_v2.Controllers
         {
             return View();
         }
+
         [AllowAnonymous]
         [HttpPost]
         public ActionResult Registrar(Login c)
@@ -128,6 +130,7 @@ namespace Sixagen_v2.Controllers
             return View();
         }
 
+        [AllowAnonymous]
         [HttpPost]
         public ActionResult RegistrarCliente(Clientes c)
         {
@@ -164,6 +167,7 @@ namespace Sixagen_v2.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public ActionResult RegistrarE(Login c)
         {
@@ -191,6 +195,7 @@ namespace Sixagen_v2.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public ActionResult RegistrarEmpleado(Empleados e)
         {
