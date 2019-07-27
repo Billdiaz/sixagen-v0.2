@@ -20,7 +20,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Motivo, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Motivo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Motivo, new { htmlAttributes = new { @class = "form-control input100" } })
                 @Html.ValidationMessageFor(model => model.Motivo, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -28,7 +28,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Descripcion, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Descripcion, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Descripcion, new { htmlAttributes = new { @class = "form-control input100" } })
                 @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -37,7 +37,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Fecha, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Fecha, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Fecha, new { htmlAttributes = new { @class = "form-control input100" } })
                 @Html.ValidationMessageFor(model => model.Fecha, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -45,7 +45,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Hora, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Hora, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Hora, new { htmlAttributes = new { @class = "form-control input100" } })
                 @Html.ValidationMessageFor(model => model.Hora, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -54,14 +54,14 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default bg-light" />
+                <input type="submit" value="Save" class="btn btn-default bg-light login100-form-btn" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Volver", "Index", null, new { @Class = "badge badge-success" })
 </div>
 
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>

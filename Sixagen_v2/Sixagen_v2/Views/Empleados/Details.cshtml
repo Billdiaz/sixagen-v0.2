@@ -61,6 +61,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }, new { @Class = "badge badge-primary" }) |
+    @Html.ActionLink("Volver", "Index", null, new { @Class = "badge badge-success" })
 </p>

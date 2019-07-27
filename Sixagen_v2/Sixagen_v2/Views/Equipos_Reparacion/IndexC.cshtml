@@ -55,7 +55,7 @@
                     @Html.DisplayFor(modelItem => item.Empleados.Nombre)
                 </td>
                 <td>
-                    @Html.ActionLink("Detalles", "DetailsC", new { id = item.ID })
+                    @Html.ActionLink("Detalles", "DetailsC", new { id = item.ID }, new { @Class = "badge badge-success" })
                 </td>
             </tr>
         }

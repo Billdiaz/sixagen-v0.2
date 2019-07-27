@@ -55,8 +55,8 @@
                     @Html.DisplayFor(modelItem => item.Clientes.Nombre)
                 </td>
                 <td>
-                    @Html.ActionLink("Editar estado", "Edit", new { id = item.ID }) |
-                    @Html.ActionLink("Detalles", "Details", new { id = item.ID })
+                    @Html.ActionLink("Editar estado", "Edit", new { id = item.ID }, new { @Class = "badge badge-primary" }) |
+                    @Html.ActionLink("Detalles", "Details", new { id = item.ID }, new { @Class = "badge badge-success" })
                 </td>
             </tr>
         }

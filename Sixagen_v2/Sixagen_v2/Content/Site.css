@@ -16,6 +16,15 @@ textarea {
     max-width: 280px;
 }
 
+.container{
+    padding-top: 20px;
+}
+
+#crear{
+    font-size: 14pt;
+    margin: 10px;
+}
+
 .producto{
     text-align: center;
     padding: 10px;

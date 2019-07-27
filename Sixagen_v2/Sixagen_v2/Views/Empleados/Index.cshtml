@@ -7,7 +7,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Agregar Empleado", "RegistrarE", "Cuentas")
+    @Html.ActionLink("Agregar Empleado", "RegistrarE", "Cuentas", null, new { @Class = "badge badge-success", @Id = "crear" })
 </p>
 <table class="table">
     <thead class="thead-dark">
@@ -56,9 +56,9 @@
                     @Html.DisplayFor(modelItem => item.Login.Usuario)
                 </td>
                 <td>
-                    @Html.ActionLink("Editar", "Edit", new { id = item.ID }) |
-                    @Html.ActionLink("Detalles", "Details", new { id = item.ID }) |
-                    @Html.ActionLink("Eliminar", "Delete", new { id = item.ID })
+                    @Html.ActionLink("Editar", "Edit", new { id = item.ID }, new { @Class = "badge badge-primary" }) |
+                    @Html.ActionLink("Detalles", "Details", new { id = item.ID }, new { @Class = "badge badge-success" }) |
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.ID }, new { @Class = "badge badge-danger" })
                 </td>
             </tr>
         }

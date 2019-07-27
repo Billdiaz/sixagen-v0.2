@@ -76,15 +76,15 @@
 <p>
     @if (User.IsInRole("Admin"))
     {
-        @Html.ActionLink("Editar", "EditA", new { id = Model.ID }) <span>|</span>
+        @Html.ActionLink("Editar", "EditA", new { id = Model.ID }, new { @Class = "badge badge-primary" }) <span>|</span>
         
-        @Html.ActionLink("Volver", "IndexA")
+        @Html.ActionLink("Volver", "IndexA", null, new { @Class = "badge badge-success" })
     }
 
     @if (User.IsInRole("Empleado"))
     {
-        @Html.ActionLink("Editar Estado", "Edit", new { id = Model.ID }) <span>|</span>
-        @Html.ActionLink("Volver", "Index")
+        @Html.ActionLink("Editar Estado", "Edit", new { id = Model.ID }, new { @Class = "badge badge-primary" }) <span>|</span>
+        @Html.ActionLink("Volver", "Index", null, new { @Class = "badge badge-success" })
     }
 
 

@@ -7,63 +7,66 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", null, new { @Class = "badge badge-success", @Id = "crear" })
 </p>
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Motivo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Descripcion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Fecha)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Hora)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Herramientas_Necesarias)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Clientes.Nombre)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Empleados.Nombre)
-        </th>
-        <th></th>
-    </tr>
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Motivo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hora)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Herramientas_Necesarias)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Clientes.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleados.Nombre)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Motivo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descripcion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fecha)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Hora)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Herramientas_Necesarias)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Clientes.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Empleados.Nombre)
+                </td>
+                <td>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Motivo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Descripcion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Fecha)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Hora)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Herramientas_Necesarias)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Clientes.Nombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Empleados.Nombre)
-        </td>
-        <td>
-           
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-           
-        </td>
-    </tr>
-}
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @Class = "badge badge-success" })
 
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>

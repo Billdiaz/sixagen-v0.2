@@ -4,9 +4,8 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
-
 <h3>Estas seguro que deseas borrar el equipo?</h3>
+
 <div>
     <h4>Equipos Reparación</h4>
     <hr />
@@ -75,8 +74,10 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Volver", "IndexA")
+            <input type="submit" value="Eliminar" class="btn btn-default login100-form-btn" /> 
+            
         </div>
+        
+        @Html.ActionLink("Volver", "IndexA", null, new { @Class = "badge badge-success" })
     }
 </div>
